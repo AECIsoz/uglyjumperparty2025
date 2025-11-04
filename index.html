@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Codystar:wght@300;400&family=Kavivanar&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Countdown to Christmas Party</title>
+</head>
+<body class="home-page">
+    <menu class="flex">
+            <button class="btn-menu"><a href="register.html"><p>Register</p><p>here</p></a></button>
+            <button class="btn-game"><a href="memory.html"><p>Memory</p><p>Game</p></a></button>
+    </menu>
+    <!-- monthly messages and in december the secret santa revelation -->
+    
+    <article id="parcel-container">
+        <!-- dynamically created divs with parcels, one for each day in December -->
+    </article>
+    <main>
+        <h1>Countdown to the</h1>
+        <h1>Ugly Jumper Christmas Party</h1>
+        <div id="clock"></div>
+    </main>
+    <!-- music buttons -->
+    <audio id="monthly-music">
+        <source id="oggSource" src="" type="audio/ogg"></source>
+        <source src="" type="audio/mpeg" id="music-source">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="music-buttons">
+        <button onclick="playAudio()" type="button" id="play-btn"></button>
+        <button onclick="pauseAudio()" type="button" id="pause-btn"></button> 
+    </div>
+    <article>
+        <!-- <div id="december-santa" class="show">
+            <img src="/images/santa_icon4.png" alt="santa icon">
+            <div id="santa-dec"></div>
+        </div> -->
+        <div id="november-santa" class="show">
+            <img src="/images/santa_icon3.png" alt="santa icon">
+            <div id="santa-nov"></div>
+        </div>
+        <div id="october-santa" class="show">
+            <img src="/images/santa_icon1.png" alt="santa icon">
+            <div id="santa-oct"><div>
+        </div>
+        
+    </article>
+    <footer>
+        <div></div>
+            <img src="/images/Logo_ny.webp" alt="deer & daisy logo" id="logo">
+        </div>
+        <div id="attributions">
+            <p>Images from <a href="https://unsplash.com/" target="_blank">unsplash.com</a></p>
+            <p>Sounds from <a href="https://pixabay.com/" target="_blank">pixabay.com</a></p>
+            <p><a href="https://www.flaticon.com/free-icons/video" title="video icons" target="_blank">Play/pause icons created by Tanah Basah - Flaticon</a></p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

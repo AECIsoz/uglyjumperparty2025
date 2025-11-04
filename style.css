@@ -1,0 +1,694 @@
+/* TABLE OF CONTENTS */
+/*
+1. reset
+2. general styling
+3. article monthly icons
+4. article bauble
+5. article parcels
+6. main
+7. audio buttons
+8. santa
+9. footer
+10. memory game
+*/
+
+/* 1. reset*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. general styling */
+html {
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    background-position: center;
+  }
+}
+
+.home-page,
+.memory-page,
+.menu-page,
+.success-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.success-page {
+  height: 100vh;
+}
+
+.success-page h1 {
+  color: black;
+}
+
+/* used on the menu page */
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+  margin: 50px;
+  width: 60%;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 20px;
+  padding: 10px;
+}
+.flex-full-width {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .flex {
+    width: 100%;
+  }
+}
+
+h1,
+h2 {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3,
+#dropdown-form label {
+  font-family: "Lobster Two", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  margin: 10px 0;
+}
+
+h4 {
+  text-align: center;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: white;
+}
+
+/* 3. article monthly messages and secret santa revelation */
+#message,
+#message-dec {
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#message-dec {
+  box-shadow: 10px 10px 20px white;
+}
+
+select,
+input,
+textarea {
+  font-size: 1.2rem;
+  height: 40px;
+}
+
+input {
+  box-shadow: 5px 5px 15px white;
+}
+
+.order-select {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* 4. article bauble */
+
+.show {
+  display: none;
+}
+
+.msg {
+  max-width: 400px;
+  background-color: rgba(39, 38, 37, 0.7);
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* animate the background color of msg */
+/* The animation code */
+@keyframes bring-color {
+  from {
+    background-color: rgba(39, 38, 37, 0.025);
+  }
+  to {
+    background-color: rgba(39, 38, 37, 0.7);
+  }
+}
+
+/* The element to apply the animation to */
+.msg {
+  animation-name: bring-color;
+  animation-duration: 2s;
+}
+
+.container {
+  display: flex;
+}
+
+.btn,
+.btn-menu,
+.btn-game {
+  background: none;
+  background-image: url("/images/bauble_glitzy.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 140px;
+  height: 140px;
+  border: none;
+  text-align: center;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  transition: background-image 500ms;
+  color: white;
+}
+
+.btn-select {
+  background: none;
+  background-image: url("/images/bauble_glitzy.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+  border: none;
+  text-align: center;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 20px;
+  color: white;
+}
+
+.btn-menu a,
+.btn-game a {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+}
+.btn:hover,
+.btn-menu:hover,
+.btn-game:hover,
+.btn-select:hover {
+  cursor: pointer;
+  background-image: url("/images/bauble_glitzy_hover.png");
+}
+
+/* animate the bauble on load */
+/* The animation code */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* The element to apply the animation to */
+.btn {
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+
+.surprise {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+  color: white;
+  margin-left: 2rem;
+}
+
+.surprise img {
+  width: 80px;
+}
+
+.move-img {
+  margin-left: 300px;
+}
+
+/* 5. article parcels */
+
+#parcel-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 10px 0;
+  width: 400px;
+}
+
+@media screen and (max-width: 500px) {
+  #parcel-container {
+    width: 100%;
+  }
+}
+
+.parcel-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/images/parcel_multi.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.number {
+  color: rgb(38, 15, 114);
+}
+
+.star-background {
+  background-image: url("/images/star.png");
+}
+
+.candle-background {
+  background-image: url("/images/candle.png");
+}
+
+.advent_2-background {
+  background-image: url("/images/advent_2.png");
+}
+
+.advent_3-background {
+  background-image: url("/images/advent_3.png");
+}
+
+.canes-background {
+  background-image: url("/images/canes.png");
+}
+
+.snowman-background {
+  background-image: url("/images/snowman.png");
+}
+
+.snowballs-background {
+  background-image: url("/images/snowballs.png");
+}
+
+.bauble-background {
+  background-image: url("/images/parcel_bauble.png");
+}
+
+.christmas-tree-background {
+  background-image: url("/images/christmas-tree.png");
+}
+
+.skier-background {
+  background-image: url("/images/skier.png");
+}
+
+.glogg-background {
+  background-image: url("images/glogg.png");
+}
+
+.skater-background {
+  background-image: url("/images/skater.png");
+}
+
+.blue-bauble-background {
+  background-image: url("/images/bauble_blue_gradient.png");
+}
+
+.sledging-background {
+  background-image: url("/images/sledging.png");
+}
+
+.halmstar-background {
+  background-image: url("/images/halmstar.png");
+}
+
+.tomtebloss-background {
+  background-image: url("/images/tomtebloss.png");
+}
+
+.blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* GROW - the animation code */
+@keyframes grow {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+/* The element to apply the animation to */
+.grow {
+  animation-name: grow;
+  animation-duration: 3s;
+}
+
+/* ROTATE - the animation code */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    width: 10px;
+  }
+  12% {
+    transform: rotate(45deg);
+    width: 20px;
+  }
+  25% {
+    transform: rotate(90deg);
+    width: 30px;
+  }
+  37% {
+    transform: rotate(135deg);
+    width: 40px;
+  }
+  50% {
+    transform: rotate(180deg);
+    width: 50px;
+  }
+  62% {
+    transform: rotate(225deg);
+    width: 60px;
+  }
+  75% {
+    transform: rotate(270deg);
+    width: 70px;
+  }
+  87% {
+    transform: rotate(315deg);
+    width: 80px;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* the element to apply the animation to */
+.rotate {
+  animation-name: rotate;
+  animation-duration: 1000ms;
+}
+
+/* SWING - the animation code */
+
+@keyframes swing {
+  0% {
+    transform: rotate(-45deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  75% {
+    transform: rotate(45deg);
+  }
+}
+
+/* the element to apply the animation to */
+.swing,
+.btn-game,
+.btn-menu {
+  animation-name: swing;
+  animation-duration: 2000ms;
+}
+
+/* 6. main */
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+main {
+  background-color: rgba(160, 81, 45, 0.514);
+  padding: 20px;
+  border: 5px solid white;
+  width: 80%;
+}
+
+#clock {
+  font-size: 2rem;
+  font-family: "Codystar", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: white;
+  margin: 20px 0 20px 0;
+}
+
+/* 7. audio buttons */
+.music-buttons {
+  margin: 20px 0;
+}
+
+.music-buttons button {
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  background-color: rgb(172, 173, 162);
+  border: none;
+  border-radius: 50px;
+}
+
+.music-buttons button:hover {
+  cursor: pointer;
+}
+
+#play-btn {
+  background-image: url("/images/play-button.png");
+}
+
+#pause-btn {
+  background-image: url("/images/pause.png");
+}
+
+/* 8. santa */
+#october-santa,
+#november-santa,
+#december-santa {
+  margin: 20px 0 20px 0;
+}
+#october-santa img,
+#november-santa img,
+#december-santa img {
+  height: 140px;
+}
+
+/* 9. footer styles*/
+
+footer img {
+  width: 100px;
+  margin: 20px 0 20px 0;
+}
+#attributions {
+  font-size: 0.8rem;
+  color: white;
+}
+footer a {
+  color: white;
+}
+
+/* 10. memory game */
+
+#grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 100px;
+  background-color: rgb(7, 28, 74);
+}
+.back-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/images/memory-bauble.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+}
+
+.back-icon a {
+  text-decoration: none;
+  color: white;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+@media screen and (max-width: 500px) {
+  .grid {
+    width: 300px;
+    justify-content: center;
+  }
+}
+
+.grid-image {
+  padding: 5px;
+}
+
+.grid img {
+  height: 100px;
+  width: 100px;
+}
+
+@media screen and (max-width: 500px) {
+  .grid img {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+.result-div {
+  margin: 20px 0;
+}
+
+/* 11. menu page */
+
+.menu-page,
+.success-page {
+  background-image: url("/images/menu.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.menu-page h1,
+.menu-page h2,
+.menu-page h3,
+.menu-page h4,
+.menu-page h5 {
+  font-family: "Kavivanar", cursive;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #222;
+  width: 50%;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.menu-container div {
+  margin-bottom: 50px;
+}
+
+.short-paragraph {
+  width: 70%;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .short-paragraph {
+    width: 100%;
+  }
+}
+
+.short-paragraph h4 {
+  margin-top: 20px;
+}
+
+#order-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .menu-container {
+    width: 100%;
+  }
+}
+
+/*  announcement of secret santa */
+#receiver {
+  color: aqua;
+  margin-top: 20px;
+}
+
+#announcement {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+}
