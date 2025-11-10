@@ -563,17 +563,11 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/memory-bauble.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100px;
-  height: 100px;
+  padding: 10px;
 }
 
 .back-icon a {
   text-decoration: none;
-  color: white;
 }
 
 .grid {
@@ -602,7 +596,6 @@ footer a {
   .grid img {
     height: 60px;
     width: 60px;
-    border-radius: 30px;
   }
 
   h3 {
@@ -618,7 +611,7 @@ footer a {
 
 .menu-page,
 .success-page {
-  background-image: url("/images/menu.webp");
+  background-image: url("/images/background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

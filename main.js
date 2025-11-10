@@ -100,7 +100,8 @@ if (month === 9) {
   // play october music
   musicSource.src = "/sounds/october.mp3";
 } else if (month === 11) {
-  wholePage.style.backgroundImage = "url('./images/november.webp')";
+  wholePage.style.backgroundImage =
+    "url('./images/background-shopping-list.jpg')";
   // show santa icon
   document.getElementById("november-santa").classList.remove("show");
   // play november music
@@ -109,7 +110,7 @@ if (month === 9) {
   wholePage.style.backgroundImage = "url('./images/menu.webp')";
   musicSource.src = "/sounds/december.mp3";
   // show santa icon
-  //document.getElementById('december-santa').classList.remove('show');
+  document.getElementById("december-santa").classList.remove("show");
 }
 
 // jQuery show message when clicking the bauble or the santa icon
@@ -150,12 +151,12 @@ $(document).ready(function () {
       $("#message-dec").removeClass("show");
       $("#dropdown-form").addClass("flex-full-width");
     });
-    /* $("#december-santa").click(function() {
-    $("#santa-dec").append("<h3>Ding Dong! Time to Party!</h3");
-  })
-  $("#december-santa").mouseleave(function() {
-    $("#santa-dec").remove();
-  }) */
+    $("#december-santa").click(function () {
+      $("#santa-dec").append("<h3>Ding Dong! Time to Party!</h3");
+    });
+    $("#december-santa").mouseleave(function () {
+      $("#santa-dec").remove();
+    });
   }
 });
 
