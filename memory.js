@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // assign class to put padding around cards
       card.setAttribute("class", "grid-image");
       // set default image of current card by locating its src and adding path to image
-      card.setAttribute("src", "images/Logo_ny.webp");
+      card.setAttribute("src", "images/memory-bauble.png");
       // give each card a data-id using i
       card.setAttribute("data-id", i);
       // add event listener to card so that it flips when clicked
@@ -131,8 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
       cards[optionTwoId].removeEventListener("click", flipCard);
       cardsWon.push(cardsChosen);
     } else {
-      cards[optionOneId].setAttribute("src", "images/Logo_ny.webp");
-      cards[optionTwoId].setAttribute("src", "images/Logo_ny.webp");
+      cards[optionOneId].setAttribute("src", "images/memory-bauble.png");
+      cards[optionTwoId].setAttribute("src", "images/memory-bauble.png");
       //alert('Sorry, try again')
     }
     cardsChosen = [];

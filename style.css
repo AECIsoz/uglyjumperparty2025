@@ -55,6 +55,19 @@ html {
   color: black;
 }
 
+button {
+  background-color: #42001d;
+  padding: 20px;
+  font-family: "Lobster Two", sans-serif;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+}
+
+button a {
+  color: white;
+}
+
 /* used on the menu page */
 .align-right {
   display: flex;
@@ -482,7 +495,7 @@ input {
 }
 
 main {
-  background-color: rgba(160, 81, 45, 0.514);
+  background-color: rgba(80, 54, 46, 0.8);
   padding: 20px;
   border: 5px solid white;
   width: 80%;
@@ -557,17 +570,23 @@ footer a {
   align-items: center;
   width: 100%;
   padding-bottom: 100px;
-  background-color: rgb(7, 28, 74);
+  background-color: #004225;
 }
 .back-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  background-image: url("/images/bauble.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
 }
 
 .back-icon a {
   text-decoration: none;
+  color: white;
 }
 
 .grid {
