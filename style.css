@@ -57,7 +57,7 @@ html {
 
 button {
   background-color: #42001d;
-  padding: 20px;
+  padding: 30px 20px 20px 20px;
   font-family: "Lobster Two", sans-serif;
   font-size: 1.5rem;
   border: none;
@@ -642,7 +642,6 @@ footer a {
 .menu-page h4,
 .menu-page h5 {
   font-family: "Kavivanar", cursive;
-  text-transform: uppercase;
   color: #222;
 }
 
@@ -677,7 +676,7 @@ footer a {
   margin-top: 20px;
 }
 
-#order-form {
+#rsvp-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
