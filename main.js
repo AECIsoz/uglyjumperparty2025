@@ -101,7 +101,7 @@ if (month === 9) {
   musicSource.src = "/sounds/october.mp3";
 } else if (month === 11) {
   wholePage.style.backgroundImage =
-    "url('./images/background-shopping-list.jpg')";
+    "url('./images/background-shopping-list.webp')";
   // show santa icon
   document.getElementById("november-santa").classList.remove("show");
   // play november music

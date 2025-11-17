@@ -630,7 +630,7 @@ footer a {
 
 .menu-page,
 .success-page {
-  background-image: url("/images/background.jpg");
+  background-image: url("/images/background.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
