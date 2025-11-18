@@ -107,28 +107,6 @@ if (month === 9) {
   // play november music
   musicSource.src = "/sounds/november.mp3";
   // media query for background photo on small screens
-  function myFunction(a) {
-    if (a.matches) {
-      // If media query matches
-      document.body.style.backgroundImage =
-        "url('./images/background-shopping-list_small.webp')";
-      document.body.style.backgroundPosition = "top";
-    } else {
-      document.body.style.backgroundColor =
-        "url('./images/background-shopping-list.webp')";
-    }
-  }
-
-  // Create a MediaQueryList object
-  var a = window.matchMedia("(max-width: 500px)");
-
-  // Call listener function at run time
-  myFunction(a);
-
-  // Attach listener function on state changes
-  a.addEventListener("change", function () {
-    myFunction(a);
-  });
 } else {
   wholePage.style.backgroundImage = "url('./images/menu.webp')";
   musicSource.src = "/sounds/december.mp3";
