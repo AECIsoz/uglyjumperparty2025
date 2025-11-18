@@ -667,6 +667,11 @@ footer a {
 }
 
 @media screen and (max-width: 500px) {
+  .menu-page,
+  .success-page {
+    background-image: url("/images/background_small.webp");
+  }
+
   .short-paragraph {
     width: 100%;
   }
